@@ -8,7 +8,7 @@ async function fetchData() {
   console.log("Dados obtidos do arquivo data.json:", data);
 
   // Mapeia os dados para extrair apenas os valores da coluna "Fixing"
-  const fixingDates = data.map((item) => item["Fixing"]);
+  const fixingDates = data.map((item) => item["Data hoje"]);
 
   // Log dos dados da coluna "Fixing" antes da remoção de duplicatas
   console.log(
