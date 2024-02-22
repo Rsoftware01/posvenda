@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #0a0a0a;
+}
+
+th,
+td {
+  border: 1px solid #020202;
+  padding: 8px;
+  text-align: left;
+  color: #000; /* Define a cor do texto dentro das células */
+}
+
+th {
+  background-color: #5893e0; /* Cor de fundo da caixa do título */
+  color: #000; /* Cor do texto do título */
+}

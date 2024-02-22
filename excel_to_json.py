@@ -25,6 +25,7 @@ for i in range(6):  # 6 para incluir o dia atual e os próximos 5 dias
     df_filtrado = df[df['Fixing'].apply(lambda x: str(x).split("/")[1] if len(str(x).split("/")) >= 3 else None).astype(float) == dia_meio]
     # Adicionando o DataFrame filtrado à lista
     dfs.append(df_filtrado)
+    print (df_filtrado)
 
 # Concatenando todos os DataFrames filtrados em um único DataFrame
 df_resultado = pd.concat(dfs)
@@ -35,6 +36,7 @@ df_resultado = df_resultado.sort_values(by='Operador(a)')
 # Salvando o DataFrame como um arquivo JSON
 json_file = "data.json"
 df_resultado.to_json(json_file, orient='records')
+
 
 # Classe para lidar com solicitações HTTP
 class RequestHandler(BaseHTTPRequestHandler):
